@@ -21,6 +21,10 @@ python3 -m http.server 8000
 # then visit http://localhost:8000
 ```
 
+## Live site
+
+Deployed on Vercel: https://stillwater-wellness-website.vercel.app — every push to `main` redeploys automatically.
+
 ## Publish with GitHub Pages
 
 1. Push this folder to a GitHub repository (the files sit at the repository root).
@@ -32,7 +36,7 @@ python3 -m http.server 8000
 
 - Each page keeps its markup in a `<template id="dc-template">` and its logic in a `<script type="text/x-dc">` block.
 - `js/dc-lite.js` is a small runtime that fills in the `{{ … }}` values, repeats `<sc-for>` blocks, shows or hides `<sc-if>` blocks, wires up `onClick`/`onChange`, and re-renders on `setState`.
-- `js/morphdom.min.js` ([morphdom](https://github.com/patrick-steele-idem/morphdom), MIT) patches the page in place between renders.
+- [morphdom](https://github.com/patrick-steele-idem/morphdom) (MIT), loaded from the jsDelivr CDN, patches the page in place between renders.
 - Fonts load from Google Fonts (Bricolage Grotesque and Manrope).
 
 ## Before going live
