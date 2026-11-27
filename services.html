@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stillwater — Services</title>
+<meta name="description" content="Stillwater Wellness Studio — physiotherapy, massage, yoga, counselling and nutrition under one roof.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F4F6F1}
+html{scroll-behavior:smooth}
+a{color:#1D4A3E}a:hover{color:#13221D}
+.sw{--bg:#F4F6F1;--ink:#13221D;--muted:#4A5A54;--green:#1D4A3E;--green2:#2C6B58;--lime:#D4EE6F;--sand:#E7EDE2;--line:#D3DBD0;--ease:cubic-bezier(.16,1,.3,1);font-family:Manrope,system-ui,sans-serif;color:var(--ink);background:var(--bg);overflow-x:clip}
+.sw *{box-sizing:border-box}
+.h{font-family:'Bricolage Grotesque',Manrope,sans-serif;letter-spacing:-0.02em}
+.wrap{max-width:1240px;margin:0 auto;padding:0 24px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 24px;border-radius:999px;border:0;font:600 15px/1 Manrope,sans-serif;cursor:pointer;text-decoration:none;position:relative;overflow:hidden;transition:transform .4s var(--ease),background .3s,color .3s,box-shadow .4s}
+.btn:hover{transform:translateY(-2px)}
+.btn-dark{background:var(--green);color:#fff}.btn-dark:hover{color:#fff;background:#163a31;box-shadow:0 14px 30px -12px rgba(29,74,62,.6)}
+.btn-lime{background:var(--lime);color:var(--ink)}.btn-lime:hover{color:var(--ink);box-shadow:0 14px 30px -12px rgba(160,190,60,.7)}
+.btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}.btn-ghost:hover{background:var(--ink);color:#fff}
+.btn::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.35) 50%,transparent 70%);transform:translateX(-120%);transition:transform .8s}
+.btn:hover::after{transform:translateX(120%)}
+.btn .arr{transition:transform .35s}.btn:hover .arr{transform:translateX(4px)}
+.prog{position:fixed;top:0;left:0;right:0;height:3px;z-index:60;pointer-events:none}
+.prog i{display:block;height:100%;background:var(--green2);transform-origin:left;transform:scaleX(0)}
+.nav{position:sticky;top:0;z-index:50;background:rgba(244,246,241,.8);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:border-color .4s,box-shadow .4s}
+.nav.scrolled{border-color:rgba(211,219,208,.9);box-shadow:0 10px 30px -24px rgba(19,34,29,.4)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;gap:24px;height:80px;transition:height .4s var(--ease)}
+.nav.scrolled .nav-in{height:66px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font:700 21px/1 'Bricolage Grotesque',sans-serif}
+.logo:hover{color:var(--ink)}
+.logo svg{transition:transform .8s var(--ease)}.logo:hover svg{transform:rotate(180deg)}
+.links{display:flex;gap:32px}
+.links a{color:var(--ink);text-decoration:none;font-weight:500;font-size:15px;position:relative;padding:6px 0}
+.links a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--green);transform:scaleX(0);transform-origin:right;transition:transform .4s}
+.links a:hover::after,.links a.on::after{transform:scaleX(1);transform-origin:left}
+.links a.on{font-weight:700}
+.burger{display:none;width:48px;height:48px;border-radius:50%;border:1.5px solid var(--line);background:#fff;cursor:pointer;align-items:center;justify-content:center;color:var(--ink)}
+.mnav{display:none}
+@media (max-width:900px){.links,.nav-cta{display:none}.burger{display:inline-flex}.mnav{display:flex;flex-direction:column;padding:8px 24px 24px;animation:drop .4s var(--ease)}.mnav a{padding:14px 0;border-bottom:1px solid var(--line);color:var(--ink);text-decoration:none;font-weight:600;font-size:17px}}
+@keyframes drop{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:none}}
+.sec{padding:130px 0}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap;margin-bottom:56px}
+.kicker{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--green2);margin:0 0 14px;display:flex;align-items:center;gap:10px}
+.kicker::before{content:"";width:28px;height:2px;background:currentColor}
+.h2{font-size:clamp(36px,4.6vw,62px);line-height:1.02;margin:0;font-weight:700;max-width:760px}
+.sub{color:var(--muted);font-size:18px;line-height:1.65;margin:0}
+.dark{background:var(--ink);color:#fff;border-radius:40px;margin:0 12px}
+.dark .kicker{color:var(--lime)}
+.media{position:relative;overflow:hidden;border-radius:28px;background:#DCE4D7}
+.px{position:absolute;inset:0;transform:scale(1.15);will-change:transform}
+.px img,.media>img{width:100%;height:100%;object-fit:cover;display:block}
+.ph{width:100%;height:100%;display:grid;place-items:center;background:repeating-linear-gradient(135deg,#DCE4D7 0 18px,#D3DDCE 18px 36px)}
+.ph span{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:999px;background:rgba(255,255,255,.85);font-size:13px;font-weight:700;color:var(--green)}
+.ready .rv{opacity:0;transform:translateY(70px);transition:opacity 1.2s var(--ease),transform 1.5s var(--ease),clip-path 1.6s var(--ease);transition-delay:var(--d,0s)}
+.ready .rv.rv-l{transform:translateX(-80px)}
+.ready .rv.rv-r{transform:translateX(80px)}
+.ready .rv.rv-s{transform:scale(.9)}
+.ready .media.rv{transform:none;clip-path:inset(30% 0 0 0 round 28px)}
+.ready .media.rv .px img,.ready .media.rv .px .ph{transform:scale(1.25);transition:transform 2s var(--ease)}
+.ready .rv.in{opacity:1;transform:none}
+.ready .media.rv.in{clip-path:inset(0 0 0 0 round 28px)}
+.ready .media.rv.in .px img,.ready .media.rv.in .px .ph{transform:none}
+.lines .ln{display:block;overflow:hidden;padding-bottom:.06em}
+.lines .ln>span{display:inline-block;animation:rise 1.1s var(--ease) both}
+.lines .ln:nth-child(2)>span{animation-delay:.12s}.lines .ln:nth-child(3)>span{animation-delay:.24s}
+@keyframes rise{from{transform:translateY(110%)}to{transform:none}}
+.fade{animation:fadeup 1s var(--ease) both}
+@keyframes fadeup{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+.cta{background:var(--lime);border-radius:40px;padding:80px 48px;text-align:center;position:relative;overflow:hidden}
+.cta h2{font-size:clamp(38px,5.4vw,72px);line-height:1;margin:0 auto 20px;max-width:880px;position:relative}
+.cta p{font-size:18px;margin:0 auto 32px;max-width:520px;line-height:1.6;color:#2A3A34;position:relative}
+.cta .c1,.cta .c2{position:absolute;border-radius:50%;border:2px solid rgba(19,34,29,.15)}
+.cta .c1{width:340px;height:340px;left:-120px;top:-140px;animation:floaty 9s ease-in-out infinite}
+.cta .c2{width:240px;height:240px;right:-60px;bottom:-110px;animation:floaty 7s ease-in-out infinite reverse}
+.foot{padding:90px 0 40px}
+.foot-grid{display:grid;grid-template-columns:minmax(0,1.6fr) repeat(3,minmax(0,1fr));gap:32px}
+.foot h4{font-size:13px;letter-spacing:.12em;text-transform:uppercase;margin:0 0 16px;color:var(--green2)}
+.foot ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.foot li,.foot li a{color:var(--muted);text-decoration:none;font-size:15px}
+.foot li a:hover{color:var(--ink)}
+.foot-bot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:56px;padding-top:24px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+.giant{font:700 clamp(64px,15vw,220px)/.85 'Bricolage Grotesque',sans-serif;letter-spacing:-.05em;color:var(--green);margin-top:56px;white-space:nowrap;overflow:hidden}
+/* services page */
+.phead{padding:72px 0 48px}
+.phead h1{font-size:clamp(48px,7vw,104px);line-height:.95;margin:18px 0 28px;font-weight:700}
+.phead-row{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap}
+.banner{height:460px;margin-top:56px}
+.filter{position:sticky;top:66px;z-index:20;padding:14px 0;background:rgba(244,246,241,.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.tabs{display:flex;gap:6px;padding:6px;background:#fff;border:1px solid var(--line);border-radius:999px;flex-wrap:wrap;width:max-content;max-width:100%}
+.tab{min-height:44px;padding:0 20px;border-radius:999px;border:0;background:transparent;font:600 14px Manrope,sans-serif;color:var(--muted);cursor:pointer;transition:all .3s}
+.tab:hover{color:var(--ink)}
+.tab.on{background:var(--ink);color:#fff}
+.rows{display:flex;flex-direction:column;gap:120px;padding:72px 0 40px}
+.row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;align-items:center;animation:fadeup .8s var(--ease) both}
+.row:nth-child(even) .row-media{order:2}
+.row-media{height:560px}
+.num{font:700 15px 'Bricolage Grotesque',sans-serif;color:var(--green2);display:flex;align-items:center;gap:12px;margin:0 0 16px}
+.num i{font-style:normal;padding:6px 12px;border-radius:999px;background:var(--sand);font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+.row h2{font-size:clamp(34px,3.8vw,52px);line-height:1.02;margin:0 0 18px}
+.row .sub{margin-bottom:28px}
+.good{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 28px;padding:0;list-style:none}
+.good li{padding:8px 14px;border-radius:999px;border:1.5px solid var(--line);font-size:14px;font-weight:600}
+.expect{list-style:none;margin:0 0 32px;padding:0;display:flex;flex-direction:column;gap:12px}
+.expect li{display:grid;grid-template-columns:28px minmax(0,1fr);gap:12px;line-height:1.55;color:var(--muted)}
+.expect li svg{color:var(--green2);margin-top:2px}
+.meta{display:flex;gap:28px;flex-wrap:wrap;align-items:center;padding-top:24px;border-top:1px solid var(--line)}
+.meta div small{display:block;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.meta div b{font:700 20px 'Bricolage Grotesque',sans-serif}
+.meta .btn{margin-left:auto}
+.plans{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.plan{border-radius:30px;padding:36px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);display:flex;flex-direction:column;gap:20px;transition:transform .5s var(--ease),background .4s}
+.plan:hover{transform:translateY(-8px);background:rgba(255,255,255,.09)}
+.plan.hot{background:var(--lime);color:var(--ink);border-color:var(--lime)}
+.plan h3{margin:0;font-size:26px}
+.plan .price{font:700 44px/1 'Bricolage Grotesque',sans-serif}
+.plan .price small{font:500 15px Manrope,sans-serif;opacity:.75}
+.plan ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;flex:1}
+.plan li{display:flex;gap:10px;line-height:1.5;font-size:15px}
+.plan li::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:currentColor;margin-top:8px;opacity:.6}
+.dark .plan:not(.hot) li{color:#C9D6D1}
+.policy{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.pol{background:#fff;border:1px solid var(--line);border-radius:26px;padding:28px}
+.pol h3{margin:0 0 10px;font-size:20px}.pol p{margin:0;color:var(--muted);line-height:1.6}
+@media (max-width:900px){.row,.plans,.policy{grid-template-columns:minmax(0,1fr);gap:32px}.row:nth-child(even) .row-media{order:0}.row-media{height:380px}.sec{padding:90px 0}.foot-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.banner{height:300px}.rows{gap:80px}}
+@media (max-width:600px){.foot-grid{grid-template-columns:minmax(0,1fr)}.dark{margin:0;border-radius:28px}.cta{padding:56px 24px}.meta .btn{margin-left:0;width:100%}}
+@media (prefers-reduced-motion:reduce){.sw *,.sw *::before,.sw *::after{animation:none!important;transition:none!important}.ready .rv{opacity:1!important;transform:none!important;clip-path:none!important}}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<template id="dc-template">
+<div class="sw {{ rootCls }}">
+<div class="prog" aria-hidden="true"><i data-prog="1"></i></div>
+<header class="nav {{ navCls }}">
+<div class="wrap nav-in">
+<a class="logo" href="index.html" aria-label="Stillwater home"><svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="16" fill="#1D4A3E"></circle><path d="M8 19c3-3 6-3 9 0s6 3 9 0" stroke="#D4EE6F" stroke-width="2.4" fill="none" stroke-linecap="round"></path><path d="M8 13c3-3 6-3 9 0s6 3 9 0" stroke="#D4EE6F" stroke-width="2.4" fill="none" stroke-linecap="round" opacity=".55"></path></svg>Stillwater</a>
+<nav class="links" aria-label="Main">
+<a href="index.html">Home</a>
+<a href="services.html" class="on" aria-current="page">Services</a>
+<a href="team.html">Practitioners</a>
+<a href="about.html">About</a>
+</nav>
+<a class="btn btn-dark nav-cta" href="book.html">Book a visit <span class="arr">→</span></a>
+<button class="burger" aria-label="Menu" aria-expanded="{{ menuAria }}" onClick="{{ toggleMenu }}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"></path></svg></button>
+</div>
+<sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+<nav class="mnav" aria-label="Mobile">
+<a href="index.html">Home</a><a href="services.html">Services</a><a href="team.html">Practitioners</a><a href="about.html">About</a><a href="book.html">Book a visit</a>
+</nav>
+</sc-if>
+</header>
+
+<section class="phead">
+<div class="wrap">
+<p class="kicker fade">Services</p>
+<div class="phead-row">
+<h1 class="h lines"><span class="ln"><span>Eight ways to</span></span><span class="ln"><span>feel better.</span></span></h1>
+<p class="sub fade" style="max-width: 420px; animation-delay: .3s">Every plan begins with a conversation. From there, your practitioner may combine services so each one supports the next.</p>
+</div>
+<div class="media banner fade" style="animation-delay: .2s"><div class="px" data-px=".12"><img src="https://images.unsplash.com/photo-1761971975724-31001b4de0bf?auto=format&fit=crop&w=1400&q=75" alt="Wide shot of the studio, morning light" loading="lazy"></div></div>
+</div>
+</section>
+
+<div class="filter">
+<div class="wrap">
+<div class="tabs" role="tablist" aria-label="Filter services">
+<sc-for list="{{ cats }}" as="c" hint-placeholder-count="5"><button class="tab {{ c.cls }}" role="tab" aria-selected="{{ c.sel }}" onClick="{{ c.pick }}">{{ c.label }}</button></sc-for>
+</div>
+</div>
+</div>
+
+<section>
+<div class="wrap rows">
+<sc-for list="{{ shown }}" as="x" hint-placeholder-count="4">
+<article class="row">
+<div class="media row-media rv"><div class="px" data-px=".1"><img src="{{ x.img }}" alt="{{ x.name }}" loading="lazy"></div></div>
+<div>
+<p class="num rv">{{ x.n }}<i>{{ x.cat }}</i></p>
+<h2 class="h rv" style="--d: .08s">{{ x.name }}</h2>
+<p class="sub rv" style="--d: .14s">{{ x.desc }}</p>
+<ul class="good rv" style="--d: .2s"><sc-for list="{{ x.good }}" as="g" hint-placeholder-count="3"><li>{{ g }}</li></sc-for></ul>
+<ul class="expect rv" style="--d: .26s"><sc-for list="{{ x.expect }}" as="e" hint-placeholder-count="3"><li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M8 12.5l2.5 2.5L16 9.5"></path></svg>{{ e }}</li></sc-for></ul>
+<div class="meta rv" style="--d: .32s">
+<div><small>Duration</small><b>{{ x.dur }}</b></div>
+<div><small>Price</small><b>[PRICE]</b></div>
+<div><small>Format</small><b>{{ x.fmt }}</b></div>
+<a class="btn btn-dark" href="book.html">Book <span class="arr">→</span></a>
+</div>
+</div>
+</article>
+</sc-for>
+</div>
+</section>
+
+<section class="sec dark" style="margin-top: 80px">
+<div class="wrap">
+<div class="sec-head"><div class="rv"><p class="kicker">Packages</p><h2 class="h h2">Ways to pay that suit how often you come.</h2></div></div>
+<div class="plans">
+<div class="plan rv"><h3 class="h">Single visit</h3><div class="price">[PRICE]<small> / session</small></div><ul><li>Any one service</li><li>Free 15-minute discovery call first</li><li>Notes shared with your care team</li></ul><a class="btn btn-lime" href="book.html">Book one visit</a></div>
+<div class="plan hot rv" style="--d: .12s"><h3 class="h">Five-session pack</h3><div class="price">[PRICE]<small> / pack</small></div><ul><li>Five sessions of one service</li><li>Use within four months</li><li>Progress review at session three</li><li>Share with a family member</li></ul><a class="btn btn-dark" href="book.html">Choose pack</a></div>
+<div class="plan rv" style="--d: .24s"><h3 class="h">Monthly membership</h3><div class="price">[PRICE]<small> / month</small></div><ul><li>Unlimited yoga and Pilates classes</li><li>One treatment session each month</li><li>Priority booking</li><li>Pause any month</li></ul><a class="btn btn-lime" href="book.html">Become a member</a></div>
+</div>
+</div>
+</section>
+
+<section class="sec">
+<div class="wrap">
+<div class="sec-head"><div class="rv"><p class="kicker">Good to know</p><h2 class="h h2">Before your first visit.</h2></div></div>
+<div class="policy">
+<div class="pol rv"><h3 class="h">Cancellations</h3><p>Move or cancel free of charge up to 24 hours before your session.</p></div>
+<div class="pol rv" style="--d: .1s"><h3 class="h">Insurance</h3><p>We can provide receipts for insurers that cover physiotherapy, counselling and acupuncture. [CHECK COVERAGE DETAILS]</p></div>
+<div class="pol rv" style="--d: .2s"><h3 class="h">Intake form</h3><p>A short health form arrives after booking, so your first session starts with you, not paperwork.</p></div>
+</div>
+</div>
+</section>
+
+<section class="wrap">
+<div class="cta rv rv-s"><span class="c1" aria-hidden="true"></span><span class="c2" aria-hidden="true"></span>
+<h2 class="h">Not sure where to start?</h2>
+<p>Book a free 15-minute discovery call and we will suggest the right service for you.</p>
+<a class="btn btn-dark" href="book.html" style="position: relative">Book a free call <span class="arr">→</span></a>
+</div>
+</section>
+
+<footer class="foot">
+<div class="wrap">
+<div class="foot-grid">
+<div><a class="logo" href="index.html"><svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="16" fill="#1D4A3E"></circle><path d="M8 19c3-3 6-3 9 0s6 3 9 0" stroke="#D4EE6F" stroke-width="2.4" fill="none" stroke-linecap="round"></path></svg>Stillwater</a><p style="color: #4A5A54; line-height: 1.6; max-width: 320px; margin: 16px 0 0">A healthcare and wellness studio for body and mind.</p></div>
+<div><h4>Explore</h4><ul><li><a href="index.html">Home</a></li><li><a href="team.html">Practitioners</a></li><li><a href="about.html">About</a></li><li><a href="book.html">Book a visit</a></li></ul></div>
+<div><h4>Services</h4><ul><li><a href="services.html">Physiotherapy</a></li><li><a href="services.html">Massage</a></li><li><a href="services.html">Yoga &amp; Pilates</a></li><li><a href="services.html">Counselling</a></li></ul></div>
+<div><h4>Visit</h4><ul><li>[STUDIO ADDRESS]</li><li>[OPENING HOURS]</li><li>[PHONE]</li><li>[EMAIL]</li></ul></div>
+</div>
+<div class="giant" aria-hidden="true">stillwater</div>
+<div class="foot-bot"><span>© 2026 Stillwater Wellness Studio · Photography via Unsplash</span><span>Not for emergencies — call your local emergency number.</span></div>
+</div>
+</footer>
+</div>
+</template>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":6400}}'>
+class Component extends DCLogic {
+  componentDidMount() {
+    var self = this;
+    this._io = ('IntersectionObserver' in window) ? new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); self._io.unobserve(e.target); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' }) : null;
+    this._onScroll = function () {
+      if (self._raf) return;
+      self._raf = requestAnimationFrame(function () { self._raf = 0; self.fx(); });
+    };
+    document.addEventListener('scroll', this._onScroll, { passive: true, capture: true });
+    window.addEventListener('resize', this._onScroll);
+    this.setState({ ready: true });
+  }
+  componentDidUpdate() { this.scan(); this.fx(); }
+  componentWillUnmount() {
+    document.removeEventListener('scroll', this._onScroll, { capture: true });
+    window.removeEventListener('resize', this._onScroll);
+    if (this._io) this._io.disconnect();
+  }
+  scan() {
+    var els = document.querySelectorAll('.rv:not(.in):not([data-o])');
+    var root = document.scrollingElement || document.documentElement;
+    var noScroll = root.scrollHeight <= window.innerHeight + 40;
+    for (var i = 0; i < els.length; i++) {
+      if (this._io && !noScroll) { els[i].setAttribute('data-o', '1'); this._io.observe(els[i]); }
+      else els[i].classList.add('in');
+    }
+  }
+  fx() {
+    var vh = window.innerHeight || 800;
+    var root = document.scrollingElement || document.documentElement;
+    var y = root.scrollTop || window.pageYOffset || 0;
+    var max = Math.max(1, root.scrollHeight - vh);
+    var bar = document.querySelector('[data-prog]');
+    if (bar) bar.style.transform = 'scaleX(' + Math.min(1, y / max) + ')';
+    var pxs = document.querySelectorAll('[data-px]');
+    for (var i = 0; i < pxs.length; i++) {
+      var el = pxs[i], r = el.parentNode.getBoundingClientRect();
+      if (r.bottom < -200 || r.top > vh + 200) continue;
+      var p = (r.top + r.height / 2 - vh / 2) / vh;
+      el.style.transform = 'translate3d(0,' + (-p * parseFloat(el.getAttribute('data-px')) * 160).toFixed(1) + 'px,0) scale(1.15)';
+    }
+    var sc = y > 20;
+    if (sc !== !!(this.state && this.state.scrolled)) this.setState({ scrolled: sc });
+  }
+  renderVals() {
+    var self = this;
+    var s = this.state || {};
+    var SV = [
+      { cat: 'Body', name: 'Physiotherapy', dur: '45 min', fmt: 'Studio or home', photo: 'Photo · Physiotherapist treating a knee', img: 'https://images.unsplash.com/photo-1649751361457-01d3a696c7e6?auto=format&fit=crop&w=1400&q=75', desc: 'A hands-on assessment of how you move, followed by treatment and a clear exercise plan you can follow at home.', good: ['Back & neck pain', 'Sports injuries', 'After surgery'], expect: ['Movement and posture assessment', 'Manual therapy and guided exercises', 'A written home programme after each visit'] },
+      { cat: 'Body', name: 'Therapeutic Massage', dur: '60 or 90 min', fmt: 'Studio or home', photo: 'Photo · Massage therapy, warm light', img: 'https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=1400&q=75', desc: 'Deep tissue, Swedish or sports massage, chosen with you on the day to match how your body feels.', good: ['Muscle tension', 'Stress', 'Training recovery'], expect: ['A short check-in on pressure and focus areas', 'Warm oils and a quiet, heated room', 'Aftercare tips to keep the benefits going'] },
+      { cat: 'Body', name: 'Acupuncture', dur: '40 min', fmt: 'Studio', photo: 'Photo · Acupuncture needles, close-up', img: 'https://images.unsplash.com/photo-1598555763574-dca77e10427e?auto=format&fit=crop&w=1400&q=75', desc: 'Fine, single-use needles placed at specific points to ease pain, support sleep and lower stress.', good: ['Chronic pain', 'Poor sleep', 'Headaches'], expect: ['Health history and pulse assessment', '20–25 minutes of rest with needles in place', 'A plan for how many sessions to expect'] },
+      { cat: 'Movement', name: 'Restorative Yoga', dur: '75 min class', fmt: 'Studio or online', photo: 'Photo · Yoga class with bolsters', img: 'https://images.unsplash.com/photo-1687436874774-fa0d4616bec9?auto=format&fit=crop&w=1400&q=75', desc: 'Slow, supported postures held with blankets and bolsters to open up the body and settle the mind.', good: ['Flexibility', 'Stress', 'All levels'], expect: ['Small classes of up to 12 people', 'All props provided', 'Breathwork and a guided rest to finish'] },
+      { cat: 'Movement', name: 'Reformer Pilates', dur: '50 min', fmt: 'Studio', photo: 'Photo · Pilates reformer machine', img: 'https://images.unsplash.com/photo-1747239069226-55382c570116?auto=format&fit=crop&w=1400&q=75', desc: 'Low-impact strength training on the reformer to build your core, improve posture and protect your back.', good: ['Core strength', 'Posture', 'Back care'], expect: ['An intro session for first-timers', 'Classes of up to 8 people', 'Spring-based resistance matched to your level'] },
+      { cat: 'Mind', name: 'Guided Meditation', dur: '30 min', fmt: 'Studio or online', photo: 'Photo · Person meditating by a window', img: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1400&q=75', desc: 'Breathwork and mindfulness techniques you can use anywhere, taught one-to-one or in small groups.', good: ['Anxiety', 'Focus', 'Sleep'], expect: ['Simple techniques, no experience needed', 'Recordings to practise at home', 'Group or private sessions'] },
+      { cat: 'Mind', name: 'Counselling', dur: '50 min', fmt: 'Studio or online', photo: 'Photo · Calm counselling room', img: 'https://images.unsplash.com/photo-1787496994323-59ac5cff09f9?auto=format&fit=crop&w=1400&q=75', desc: 'Confidential one-to-one sessions with a licensed therapist, to work through stress, change, grief or anxiety.', good: ['Stress', 'Life changes', 'Low mood'], expect: ['A first session to see if it feels right', 'Evidence-based approaches such as CBT', 'Strict confidentiality'] },
+      { cat: 'Nutrition', name: 'Nutrition Coaching', dur: '45 min', fmt: 'Studio or online', photo: 'Photo · Colourful healthy bowl', img: 'https://images.unsplash.com/photo-1600335895229-6e75511892c8?auto=format&fit=crop&w=1400&q=75', desc: 'Practical, food-first guidance that fits your routine, culture and taste — no fad diets.', good: ['Energy', 'Gut health', 'Weight goals'], expect: ['A three-day food diary review', 'A personal plan with simple recipes', 'Check-ins to adjust as you go'] }
+    ];
+    var cat = s.cat || 'All';
+    var CATS = ['All', 'Body', 'Movement', 'Mind', 'Nutrition'];
+    var shown = SV.filter(function (x) { return cat === 'All' || x.cat === cat; }).map(function (x, i) {
+      return Object.assign({}, x, { n: (i < 9 ? '0' : '') + (i + 1) });
+    });
+    return {
+      rootCls: s.ready ? 'ready' : '',
+      navCls: s.scrolled ? 'scrolled' : '',
+      menuOpen: !!s.menu, menuAria: s.menu ? 'true' : 'false',
+      toggleMenu: function () { self.setState({ menu: !s.menu }); },
+      cats: CATS.map(function (c) { return { label: c, cls: c === cat ? 'on' : '', sel: c === cat ? 'true' : 'false', pick: function () { self.setState({ cat: c }); } }; }),
+      shown: shown
+    };
+  }
+}
+</script>
+<script src="https://cdn.jsdelivr.net/npm/morphdom@2.7.4/dist/morphdom-umd.min.js"></script>
+<script src="js/dc-lite.js"></script>
+</body>
+</html>
